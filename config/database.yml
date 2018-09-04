@@ -19,6 +19,8 @@ development:
 test:
   <<: *default
   database: testapp_test
+  host: database
+  user: postgres
 
 production:
   <<: *default
