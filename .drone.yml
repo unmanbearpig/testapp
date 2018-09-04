@@ -1,0 +1,13 @@
+pipeline:
+  test:
+    image: circleci/ruby:2.5-node-browsers
+    commands:
+      - bundle
+      - rake db:setup
+      - rspec
+
+services:
+  database:
+    image: circleci/postgres:9.4.12-alpine
+  redis:
+    image: redis:alpine
